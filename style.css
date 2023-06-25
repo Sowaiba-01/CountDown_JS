@@ -1,0 +1,136 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark: hsl(234, 17%, 12%);
+}
+body
+{
+    background-color: var(--Very-dark);
+    text-align: center;
+    background-image: url(bg-stars.svg);
+    font-family: 'Red Hat Text', sans-serif;
+    min-height: 100vh;
+
+}
+main
+{
+    height: 70vh;
+}
+    h1
+{
+    font-size: 22px;
+    color: var(--White);
+    letter-spacing: 0.4em;
+    padding-top: 95px;
+}
+span#days, span#hours, span#mins, span#secs
+{
+color: var(--Soft-red);
+font-weight: bolder;
+position: absolute;
+font-size: 55px;
+top: 22px;
+    left: 5px;
+    right: 5px;
+}
+div.days,div.hours,div.min,div.sec
+{
+    display: inline-block;
+position: relative;
+color: var(--Grayish-blue);
+text-transform: uppercase;
+letter-spacing: 0.2em;
+font-size: 12px;
+margin-right: 15px;
+}
+div p
+{
+    padding-top: 10px;
+}
+span
+{
+   color: white;
+   margin-bottom: 15px;
+}
+footer
+{
+    height: 110px;
+    background-image: url(pattern-hills.svg);
+    padding: 95px 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+footer>ul>li
+{
+    top: 10px;
+    display: inline-block;
+    margin-left: 15px;
+}
+footer>ul>li>img:hover
+{
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    cursor: pointer;
+}
+div.boxses
+{
+    margin-top: 88px;
+    margin-bottom: 88px;
+}
+@keyframes flipAnimation {
+    0% {
+      transform: rotateX(0deg);
+    }
+    50% {
+      transform: rotateX(180deg);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+  
+  #rec1,
+  #rec2 {
+    height: 60px;
+    width: 130px;
+    background-color: var(--Very-dark-blue);
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    animation: flipAnimation 5s infinite;
+  }
+
+  @media only screen and (min-width: 250px) and (max-width: 400px){
+    #rec1, #rec2 {
+        height: 52px;
+        width: 75px;
+    }
+    span#days, span#hours, span#mins, span#secs {
+        font-size: 38px;
+    }
+    div.days, div.hours, div.min, div.sec {
+       
+        margin-right: 4px;
+    }
+    footer {
+        height: 154px;
+  }
+  }
+  @media only screen and (min-width: 400px) and (max-width: 600px)
+  {
+    footer {
+        height: 174px;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 912px)
+{
+  footer {
+      height: 250px;
+}
+}
